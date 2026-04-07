@@ -23,15 +23,15 @@ Just a 9×9 grid of `<div>`s, some animated GIFs, and a frog with a death wish.
 
 ```
 ┌─────────────────────────────┐
-│  🏠  . . . . H . . . .     │  ← Row 0    Win zone (reach home)
-│  🌿  . . . . . . . . .     │  ← Row 1    Safe (grass)
-│  🚗  ← ← ← ← ← ← ← ← ←   │  ← Row 2    Road (cars going left)
-│  🚗  → → → → → → → → →   │  ← Row 3    Road (cars going right)
-│  🌿  . . . . . . . . .     │  ← Row 4    Safe (grass)
-│  🪵  ← ← ← ← ← ← ← ← ←   │  ← Row 5    River (logs going left)
-│  🪵  → → → → → → → → →   │  ← Row 6    River (logs going right)
-│  🌿  . . . . . . . . .     │  ← Row 7    Safe (grass)
-│  🐸  . . . . S . . . .     │  ← Row 8    Start (spawn point)
+│  🏠  . . . . H . . . .      │  ← Row 0    Win zone (reach home)
+│  🌿  . . . . . . . . .      │  ← Row 1    Safe (grass)
+│  🚗  ← ← ← ← ← ← ← ← ←      │  ← Row 2    Road (cars going left)
+│  🚗  → → → → → → → → →      │  ← Row 3    Road (cars going right)
+│  🌿  . . . . . . . . .      │  ← Row 4    Safe (grass)
+│  🪵  ← ← ← ← ← ← ← ← ←      │  ← Row 5    River (logs going left)
+│  🪵  → → → → → → → → →      │  ← Row 6    River (logs going right)
+│  🌿  . . . . . . . . .      │  ← Row 7    Safe (grass)
+│  🐸  . . . . S . . . .      │  ← Row 8    Start (spawn point)
 └─────────────────────────────┘
 ```
 
