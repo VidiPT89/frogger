@@ -1,0 +1,81 @@
+#grid {
+    width: 360px;
+    height: 360px;
+    border: 4px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid div {
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.end {
+    background-color: transparent;
+    background-image: url("images/home.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.start {
+    background-color: darkgreen;
+}
+
+.river-left,
+.river-right {
+    background-color: aqua;
+}
+
+.l1,
+.l2,
+.l3 {
+    background-color: brown;
+    background-image: url("images/log.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.l4,
+.l5 {
+    background-color: aqua;
+    background-image: url("images/water.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.road-left,
+.road-right {
+    background-color: lightgrey;
+}
+
+.c1 {
+    background-color: black;
+    background-image: url("images/car.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.c2,
+.c3 {
+    background-color: lightgray;
+    background-color: black;
+    background-image: url("images/road2.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.frog {
+    background-color: green;
+    background-image: url("images/frog.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
