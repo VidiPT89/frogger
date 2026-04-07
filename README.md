@@ -21,19 +21,19 @@ Just a 9×9 grid of `<div>`s, some animated GIFs, and a frog with a death wish.
 
 ## Game Zones
 
-
+```
 ┌─────────────────────────────┐
-│ 🏠 . . . . H . . . . │ ← Row 0 Win zone (reach home)
-│ 🌿 . . . . . . . . . │ ← Row 1 Safe (grass)
-│ 🚗 ← ← ← ← ← ← ← ← ← │ ← Row 2 Road (cars going left)
-│ 🚗 → → → → → → → → → │ ← Row 3 Road (cars going right)
-│ 🌿 . . . . . . . . . │ ← Row 4 Safe (grass)
-│ 🪵 ← ← ← ← ← ← ← ← ← │ ← Row 5 River (logs going left)
-│ 🪵 → → → → → → → → → │ ← Row 6 River (logs going right)
-│ 🌿 . . . . . . . . . │ ← Row 7 Safe (grass)
-│ 🐸 . . . . S . . . . │ ← Row 8 Start (spawn point)
+│  🏠  . . . . H . . . .     │  ← Row 0    Win zone (reach home)
+│  🌿  . . . . . . . . .     │  ← Row 1    Safe (grass)
+│  🚗  ← ← ← ← ← ← ← ← ←   │  ← Row 2    Road (cars going left)
+│  🚗  → → → → → → → → →   │  ← Row 3    Road (cars going right)
+│  🌿  . . . . . . . . .     │  ← Row 4    Safe (grass)
+│  🪵  ← ← ← ← ← ← ← ← ←   │  ← Row 5    River (logs going left)
+│  🪵  → → → → → → → → →   │  ← Row 6    River (logs going right)
+│  🌿  . . . . . . . . .     │  ← Row 7    Safe (grass)
+│  🐸  . . . . S . . . .     │  ← Row 8    Start (spawn point)
 └─────────────────────────────┘
-
+```
 
 ---
 
@@ -66,52 +66,52 @@ Just a 9×9 grid of `<div>`s, some animated GIFs, and a frog with a death wish.
 
 ## Project Structure
 
-
+```
 frogger/
 │
-├── 📄 index.html ← Page structure and grid container
-├── 🎨 styles.css ← Grid layout, zone colours, GIF backgrounds
-├── ⚙️ app.js ← All game logic: movement, obstacles, state, win/lose
+├── 📄 index.html          ← Page structure and grid container
+├── 🎨 styles.css          ← Grid layout, zone colours, GIF backgrounds
+├── ⚙️  app.js             ← All game logic: movement, obstacles, state, win/lose
 │
 └── 📁 images/
-├── frog.gif ← The hero
-├── car.gif ← The villain
-├── log.gif ← The platform (kind of)
-├── log2.gif ← The other log
-├── water.gif ← The danger
-├── grass.gif ← The safe zone
-├── road.jpg ← Road texture (lane 1)
-├── road2.jpg ← Road texture (lane 2)
-└── home.gif ← The destination
-
+    ├── frog.gif           ← The hero
+    ├── car.gif            ← The villain
+    ├── log.gif            ← The platform (kind of)
+    ├── log2.gif           ← The other log
+    ├── water.gif          ← The danger
+    ├── grass.gif          ← The safe zone
+    ├── road.jpg           ← Road texture (lane 1)
+    ├── road2.jpg          ← Road texture (lane 2)
+    └── home.gif           ← The destination
+```
 
 ---
 
 ## How It Works
 
+```
+createBoard()  →  Builds 81 <div>s into a 9×9 grid
+    │
+    ├── Position 4     →  .end            (win zone — home)
+    ├── Position 76    →  .start + .frog  (spawn point)
+    ├── Rows 18–26    →  .road-left       (cars, c1–c3, going left)
+    ├── Rows 27–35    →  .road-right      (cars, c1–c3, going right)
+    ├── Rows 45–53    →  .river-left      (logs, l1–l5, going left)
+    └── Rows 54–62    →  .river-right     (logs, l1–l5, going right)
 
-createBoard() → Builds 81 <div>s into a 9×9 grid
-│
-├── Position 4 → .end (win zone — home)
-├── Position 76 → .start + .frog (spawn point)
-├── Rows 18–26 → .road-left (cars, c1–c3, going left)
-├── Rows 27–35 → .road-right (cars, c1–c3, going right)
-├── Rows 45–53 → .river-left (logs, l1–l5, going left)
-└── Rows 54–62 → .river-right (logs, l1–l5, going right)
+keydown  →  moveFrog()
+    ├── Removes .frog from current cell
+    ├── Recalculates position with boundary checks
+    └── Adds .frog to new cell
 
-keydown → moveFrog()
-├── Removes .frog from current cell
-├── Recalculates position with boundary checks
-└── Adds .frog to new cell
+setInterval (1000ms)  →  autoMove()
+    └── Cycles all car and log CSS classes one step per tick
 
-setInterval (1000ms) → autoMove()
-└── Cycles all car and log CSS classes one step per tick
-
-setInterval (50ms) → checkWin()
-├── .end reached → "Ganhaste!!!!" → game over (win)
-├── .c1 or .l1–.l3 → "Morreste!!!!" → game over (lose)
-└── Either result → clears intervals + removes keydown listener
-
+setInterval (50ms)  →  checkWin()
+    ├── .end reached      →  "Ganhaste!!!!"  →  game over (win)
+    ├── .c1 or .l1–.l3   →  "Morreste!!!!"  →  game over (lose)
+    └── Either result     →  clears intervals + removes keydown listener
+```
 
 ---
 
