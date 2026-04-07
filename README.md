@@ -25,11 +25,11 @@ Just a 9×9 grid of `<div>`s, some animated GIFs, and a frog with a death wish.
 ┌─────────────────────────────┐
 │  🏠  . . . . H . . . .     │  ← Row 0    Win zone (reach home)
 │  🌿  . . . . . . . . .     │  ← Row 1    Safe (grass)
-│  🚗  ← ← ← ← ← ← ← ← ←     │  ← Row 2    Road (cars going left)
-│  🚗  → → → → → → → → →     │  ← Row 3    Road (cars going right)
+│  🚗  ← ← ← ← ← ← ← ← ←   │  ← Row 2    Road (cars going left)
+│  🚗  → → → → → → → → →   │  ← Row 3    Road (cars going right)
 │  🌿  . . . . . . . . .     │  ← Row 4    Safe (grass)
-│  🪵  ← ← ← ← ← ← ← ← ←     │  ← Row 5    River (logs going left)
-│  🪵  → → → → → → → → →     │  ← Row 6    River (logs going right)
+│  🪵  ← ← ← ← ← ← ← ← ←   │  ← Row 5    River (logs going left)
+│  🪵  → → → → → → → → →   │  ← Row 6    River (logs going right)
 │  🌿  . . . . . . . . .     │  ← Row 7    Safe (grass)
 │  🐸  . . . . S . . . .     │  ← Row 8    Start (spawn point)
 └─────────────────────────────┘
@@ -123,13 +123,6 @@ setInterval (50ms)  →  checkWin()
 - The lose condition checks for `.c1` (car) and `.l1`, `.l2`, `.l3`. If it looks like the logs are killing you instead of the water — you're reading the code correctly. The river logic is a known curiosity.
 - There's a large commented-out `switch` block left in the file from an earlier approach. It was replaced by arithmetic. The ghost stays. It has earned its place.
 - Variable comments read: `// l de LOG = Tronco`. The code is bilingual. The game is not.
-
----
-
-## Context
-
-Built as part of my **Web Development (Front-End)** module at **CESAE Digital**.
-First project involving continuous game-state logic, interval-based animation, class-driven obstacle movement, and collision detection — all wired manually, no libraries.
 
 ---
 
